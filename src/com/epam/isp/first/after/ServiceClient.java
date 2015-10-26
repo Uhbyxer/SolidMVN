@@ -1,9 +1,4 @@
-package com.epam.isp.first.before;
-
-
-
-//http://habrahabr.ru/post/208442/
-//http://igor.quatrocode.com/2008/09/solid-top-5.html
+package com.epam.isp.first.after;
 
 public abstract class ServiceClient {
 	private String serviceUri;
@@ -21,6 +16,5 @@ public abstract class ServiceClient {
 	}
 	
 	public abstract void sendData(Object data);
-	public abstract void flush();
 	
 }
