@@ -3,6 +3,10 @@ package com.epam.isp.first.before;
 
 public class BufferingHttpServiceClient extends ServiceClient {
 
+	public BufferingHttpServiceClient(String serviceUri) {
+		super(serviceUri);
+	}
+
 	private Buffer buffer = new Buffer();
 	
 	@Override
@@ -12,7 +16,7 @@ public class BufferingHttpServiceClient extends ServiceClient {
 
 	@Override
 	public void flush() {
-		Channel channel = new Channel("http:\\\\OtherUri\\");
+		Channel channel = new Channel(getServiceUri());
 		channel.send(buffer.getAll());
 		buffer.clear();
 		

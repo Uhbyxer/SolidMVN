@@ -12,11 +12,8 @@ public abstract class ServiceClient {
 		this.serviceUri = serviceUri;
 	}
 	
-	private String getServiceUri() {
+	public String getServiceUri() {
 		return serviceUri;
-	}
-	public void setServiceUri(String serviceUri) {
-		this.serviceUri = serviceUri;
 	}
 
 	public abstract void sendData(Object data);

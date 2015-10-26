@@ -8,13 +8,13 @@ public class HttpServiceClient extends ServiceClient {
 
 	@Override
 	public void sendData(Object data) {
-		Channel channel = new Channel();
+		Channel channel = new Channel(getServiceUri());
 		channel.send(data);
 	}
 
 	@Override
 	public void flush() {
-		
+		//nothing to do...
 	}
 
 }
